@@ -12,10 +12,12 @@ export class TodosIndexComponent implements OnInit {
       private todoService: TodoService
   ) { }
 
-  todos;
+  todos = [];
 
   ngOnInit() {
-      this.todos = this.todoService.getTodos();
+      this.todoService.getTodosObservable().subscribe(newTodo => {
+          this.todos.push(newTodo);
+      });
   }
 
 }
