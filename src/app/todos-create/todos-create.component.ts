@@ -9,6 +9,10 @@ export class TodosCreateComponent implements OnInit {
 
   constructor() { }
 
+  create(todo){
+      console.log(todo);
+  }
+
   ngOnInit() {
   }
 

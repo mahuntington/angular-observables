@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { TodosIndexComponent } from './todos-index/todos-index.component';
 import { TodosCreateComponent } from './todos-create/todos-create.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,8 @@ import { TodosCreateComponent } from './todos-create/todos-create.component';
     TodosCreateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
