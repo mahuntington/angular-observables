@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-todos-index',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosIndexComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+      private todoService: TodoService
+  ) { }
+
+  todos;
 
   ngOnInit() {
+      this.todos = this.todoService.getTodos();
   }
 
 }
